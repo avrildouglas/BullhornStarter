@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+@WebServlet("/ProfileServlet")
 
 public class ProfileServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,6 +32,8 @@ public class ProfileServlet extends HttpServlet {
 		doPost(request,response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	
 		/*
 		 * when the user clicks on a link to view a profile the link will contain 
 		 * the url of this servlet and the userid and action
@@ -120,6 +123,8 @@ public class ProfileServlet extends HttpServlet {
 
 		nextURL = "/profile.jsp";
 		//redirect to next page as indicated by the value of the nextURL variable
+		//added code here
+		getServletContext().getRequestDispatcher(nextURL).forward(request,response);
 
 	}
 }

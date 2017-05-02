@@ -41,12 +41,6 @@ public class User {
 	public void setMotto(String motto) {
 		this.motto = motto;
 	}
-	public boolean isValidUser(String email){
-		//this method should go to the database and query
-		//for the email and passowrd. If both are found then
-		//the user is valid. Otherwise the user is invalid;
-		return true;
-	}
-	
+
 
 }
