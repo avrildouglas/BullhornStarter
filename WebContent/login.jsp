@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Welcome to Bullhorn</title>
+<title>${title}</title>
 </head>
 <body>
 <h1>Login Page</h1>
+
+
+<p><a href="adduser.jsp">New User</a></p>
 
 <form action="LoginServlet" method="post">
 	Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" value="bart@fox.net"><br/>
@@ -15,6 +18,7 @@
 	<input type="hidden" name="action" value="login">
 	<input type="submit" value="Log In">
 </form>
+
 <p/>
 <a href="LoginServlet">What happens if you go directly to login servlet without logging in?</a>
 </body>

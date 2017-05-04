@@ -67,9 +67,9 @@ public class DbUser {
 		//and return true if successful, false otherwise
 		return true;
 	}
-	public boolean isValidUser(String email){
+	public static boolean isValidUser(String email, String password){
 		//this method should go to the database and query
-		//for the email and passowrd. If both are found then
+		//for the email and password. If both are found then
 		//the user is valid. Otherwise the user is invalid;
 		return true;
 	}

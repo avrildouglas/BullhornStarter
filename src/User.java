@@ -41,6 +41,4 @@ public class User {
 	public void setMotto(String motto) {
 		this.motto = motto;
 	}
-
-
 }

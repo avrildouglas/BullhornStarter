@@ -37,14 +37,15 @@ public class LoginServlet extends HttpServlet {
 		
 		if(!action.isEmpty()||!(action==null)){
 		    if (request.getParameter("action").toString().equals("logout")){
-		        //Go back to login.jsp. 
+		        request.setAttribute("title","loginpage");
+		    	//Go back to login.jsp. 
 		        nextPage = "/login.jsp";
 		        response.sendRedirect(request.getContextPath() + nextPage);
 		        return;//return here exits the method and prevents an error
 		    }else{
 		        nextPage = "/home.jsp";
 		    }
-			
+		}
 		//putting a blank message just ensures I have a blank message.Since the message is set in the session
 		//it could still exist as the user navigates between pages so at the top of each page I should endure
 		//the message attribute contains nothing. Alternatively, I could just remove it if it exists.
@@ -66,8 +67,7 @@ public class LoginServlet extends HttpServlet {
 		//Your work here is done. Redirect to next page as indicated by the value of the nextURL variable
 		response.sendRedirect(request.getContextPath() + nextPage);
 	}
-	}
-
+}
 
 
 
